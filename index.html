@@ -80,12 +80,6 @@
   .filter-body qlik-embed { width:100%; height:100%; display:block; }
   .filter-main-object { flex:1; min-height:0; position:relative; }
   .filter-main-embed { width:100%; height:100%; }
-  .qa-panel { position:fixed; inset:0; background:#fff; z-index:66; display:none; flex-direction:column; }
-  .qa-panel.open { display:flex; }
-  .qa-header { flex-shrink:0; display:flex; align-items:center; justify-content:space-between; padding:12px 14px; border-bottom:1px solid #eee; font-weight:700; }
-  .qa-close { border:none; background:none; font-size:20px; cursor:pointer; }
-  .qa-body { flex:1; overflow-y:auto; position:relative; }
-  .qa-body .qa-embed, .qa-body qlik-embed { width:100%; display:block; }
   .header-filter-btn-slot { width:40px; height:40px; flex-shrink:0; overflow:hidden; background:transparent; display:flex; align-items:center; justify-content:center; }
   .header-filter-btn-slot qlik-embed { width:100%; height:100%; display:block; }
   #global-filter-buttons { display:none; align-items:center; gap:6px; }
@@ -123,7 +117,7 @@
   <div class="tab-content">
     <div class="hero" style="flex:0 0 55%;">
       <div style="position:absolute;inset:0;background-image:url('https://ivanasensioqlik.github.io/Caixabank/img/Bg_Mobile.webp');background-size:cover;background-position:center;"></div>
-      <div class="hero-text" style="position:relative;z-index:2;display:flex;flex-direction:column;height:100%;padding:20px;color:#1E1E1E;justify-content:flex-start;align-items:flex-start;text-align:left;">
+      <div class="hero-text" style="position:relative;z-index:2;display:flex;flex-direction:column;height:100%;padding:20px;justify-content:flex-start;align-items:flex-start;text-align:left;">
         <h1 style="font-size:26px;font-weight:800;margin:0;">Bienvenido</h1>
         <p style="font-size:max(15px, 13px);opacity:.85;margin-top:6px;max-width:85%;">Análisis descriptivo y predictivo, a través de preguntas directas sobre su asistente de Inteligencia Artificial Qlik Answers
 </p>
@@ -146,9 +140,9 @@
     <div class="header-right"><button class="icon-btn" onclick="nextTab(1)" aria-label="Siguiente"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg></button></div>
   </div>
   <div class="tab-content">
-    <div class="objects-grid" style="gap:15px;"><div class="objects-row" style="flex:0 0 auto;min-height:150px;"><div class="obj-embed-wrap" id="obj-1nsamyb" style="flex:1 1 0%;min-width:0;background:#F7F8FA;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="analytics/chart" app-id="cd5503f2-2a75-48e1-8838-5b78a016c42c" object-id="QNmccmz"></qlik-embed></div></div>
-<div class="objects-row" style="flex:0 0 auto;min-height:150px;"><div class="obj-embed-wrap" id="obj-ktsz2x1" style="flex:1 1 0%;min-width:0;background:#F7F8FA;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="analytics/chart" app-id="cd5503f2-2a75-48e1-8838-5b78a016c42c" object-id="XAkdTP"></qlik-embed></div></div>
-<div class="objects-row" style="flex:0 0 auto;min-height:150px;"><div class="obj-embed-wrap" id="obj-sibwjl6" style="flex:1 1 0%;min-width:0;background:#F7F8FA;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="analytics/chart" app-id="cd5503f2-2a75-48e1-8838-5b78a016c42c" object-id="GkWZ"></qlik-embed></div></div>
+    <div class="objects-grid" style="gap:15px;"><div class="objects-row" style="flex:0 0 auto;min-height:150px;"><div class="obj-embed-wrap" id="obj-1nsamyb" style="flex:1 1 0%;min-width:0;background:#F7F8FA;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="classic/chart" app-id="cd5503f2-2a75-48e1-8838-5b78a016c42c" object-id="QNmccmz"></qlik-embed></div></div>
+<div class="objects-row" style="flex:0 0 auto;min-height:150px;"><div class="obj-embed-wrap" id="obj-ktsz2x1" style="flex:1 1 0%;min-width:0;background:#F7F8FA;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="classic/chart" app-id="cd5503f2-2a75-48e1-8838-5b78a016c42c" object-id="XAkdTP"></qlik-embed></div></div>
+<div class="objects-row" style="flex:0 0 auto;min-height:150px;"><div class="obj-embed-wrap" id="obj-sibwjl6" style="flex:1 1 0%;min-width:0;background:#F7F8FA;border:none;position:relative;border-radius:6px;overflow:hidden;"><qlik-embed ui="classic/chart" app-id="cd5503f2-2a75-48e1-8838-5b78a016c42c" object-id="GkWZ"></qlik-embed></div></div>
 <div class="objects-row" style="flex:0 0 auto;"><div class="obj-minimized" id="obj-ow5rl29" style="flex:0 0 100%;max-width:100%;width:100%;align-self:flex-start;background:#F7F8FA;color:#1E1E1E;border-left:3px solid #009AD8;">
   <button class="obj-minimized-toggle" onclick="toggleExpand('ow5rl29')">
     <span class="obj-min-text"><span class="obj-min-title">Evolución mensual 📊</span><span class="obj-min-desc">Ventas e Ingresos</span></span>
@@ -208,7 +202,6 @@
 <div class="info-popup" id="info-popup-9dhtyjn" style="display:none;"><div class="info-popup-inner" style="background:#F7F8FA;color:#1E1E1E;"><button class="popup-close" onclick="toggleInfoPopup('9dhtyjn')">&times;</button><div class="info-popup-title" style="color:#009845;">About this app</div><p style="margin:0 0 10px;">Aplicación con información general sobre los resultados de Caixabank.</p><p style="margin:0 0 10px;">Se analizan indicadores de ventas y actividad comercial para los ejercicios 2025 y 2026.</p><p style="margin:0 0 10px;">Fuente: Datos Dummy generados mediante IA con propósito de disponer de un prototipo.</p><p style="margin:0 0 10px;">Soporte:</p><p style="margin:0 0 10px;"><a href="mailto:ivan.felipe@qlik.com" style="color:#3B82F6;text-decoration:underline;word-break:break-all;">ivan.felipe@qlik.com</a></p><p style="margin:0 0 10px;">Actualizado: 24 de Noviembre de 2026</p></div></div>
 <div class="filter-panel" id="global-filter-panel" style="width:290px;"><div class="filter-header"><span>Filters</span><button class="filter-close" onclick="toggleFilterPanel()">&times;</button></div><div class="filter-body"><div class="filter-main-object"><div class="filter-main-embed" data-lazy-embed data-ui="analytics/chart" data-object-id="939fc2a9-6854-482a-9d19-6dc8149c7779" data-app-id="cd5503f2-2a75-48e1-8838-5b78a016c42c"></div></div></div></div>
 <div class="filter-backdrop" id="filter-backdrop"></div>
-
 <script>
   const TAB_COUNT = 4;
   const TAB_META = [{"id":"9dhtyjn","infoEnabled":true,"isWelcome":true},{"id":"fnm9p6m","infoEnabled":false,"isWelcome":false},{"id":"ll0k73g","infoEnabled":false,"isWelcome":false},{"id":"2sivnog","infoEnabled":false,"isWelcome":false}];
@@ -230,10 +223,8 @@
     if (!container || container.dataset.mounted === '1') return;
     var el = document.createElement('qlik-embed');
     el.setAttribute('ui', container.dataset.ui);
-    if (container.dataset.appId) el.setAttribute('app-id', container.dataset.appId);
+    el.setAttribute('app-id', container.dataset.appId || '');
     if (container.dataset.objectId) el.setAttribute('object-id', container.dataset.objectId);
-    if (container.dataset.assistantId) el.setAttribute('assistant-id', container.dataset.assistantId);
-    if (container.dataset.appearance) el.setAttribute('appearance', container.dataset.appearance);
     container.appendChild(el);
     container.dataset.mounted = '1';
   }
@@ -289,12 +280,6 @@
     const opening = el && !el.classList.contains('open');
     if (el) el.classList.toggle('open');
     if (backdrop) backdrop.classList.toggle('open');
-    if (opening) mountAllIn(el);
-  }
-  function toggleQlikAnswersPanel() {
-    const el = document.getElementById('qlik-answers-panel');
-    const opening = el && !el.classList.contains('open');
-    if (el) el.classList.toggle('open');
     if (opening) mountAllIn(el);
   }
   function toggleHiddenMenu() {
